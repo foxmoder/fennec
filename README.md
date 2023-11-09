@@ -1,10 +1,6 @@
-# Fennec
-
 <p align="center">
-A tiny JCVM language for effortless Java Card programming.<br><br>
-<img src="https://github.com/foxmoder/fennec/assets/6652788/0447aa6c-808c-4c34-ba96-10113133b632" alt="A photo of a fennec fox in the sand with eyes closed, curled up with its head tucked with its tail" width="300"><br><br>
-<sup>Photo by <a href="https://unsplash.com/@clement_roy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Clément ROY</a> on <a href="https://unsplash.com/photos/white-and-brown-fox-lying-on-brown-sand-during-daytime-5fvOITtHgaE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></sup>
-</p><br>  
+<img src="https://github.com/foxmoder/fennec/assets/6652788/655f0c10-b807-4e92-b043-7a6b8da303fd" alt="The fennec logo: the word fennec in a sans serif font with an orange gradient" width="300">
+</p><hr>
 
 ## What is Fennec?
 
