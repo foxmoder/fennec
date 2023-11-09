@@ -1,6 +1,7 @@
+<br>
 <p align="center">
 <img src="https://github.com/foxmoder/fennec/assets/6652788/655f0c10-b807-4e92-b043-7a6b8da303fd" alt="The fennec logo: the word fennec in a sans serif font with an orange gradient" width="300">
-</p><hr>
+</p>
 
 ## What is Fennec?
 
