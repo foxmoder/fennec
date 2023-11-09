@@ -13,11 +13,13 @@ Java Card works at the APDU level, meaning Java Card programs work directly with
 
 Fennec instead allows the programmer to write functions for each ISO 7816 instruction as they would in a systems language, using [protocol buffers](https://protobuf.dev/) within the command and response APDUs' data fields for serialization. This ensures that data passed to the card is interpreted correctly in a manner transparent to the user.
 
+As an added perk, Fennec also leverages protocol buffers to auto-generate code for creating APDUs to call any such function.
+
 ### Better typing
 
 Java Card provides fairly barebones support for various types: just `boolean`, `byte`, `short`, and `int`, as well as arrays of those.
 
-On top of these, Fennec provides built-in support for wide integer types, option types, and result types.
+On top of these, Fennec provides built-in support for wide integer types, option types, and result types. All of these can be returned directly from the card and serialized effortlessly.
 
 ### Simpler syntax
 
