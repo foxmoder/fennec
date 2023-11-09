@@ -1,5 +1,10 @@
 # Fennec
-A tiny JCVM language for effortless Java Card programming.
+
+<p align="center">
+A tiny JCVM language for effortless Java Card programming.<br><br>
+<img src="https://github.com/foxmoder/fennec/assets/6652788/0447aa6c-808c-4c34-ba96-10113133b632" alt="A photo of a fennec fox in the sand with eyes closed, curled up with its head tucked with its tail" width="300"><br><br>
+<sup>Photo by <a href="https://unsplash.com/@clement_roy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Clément ROY</a> on <a href="https://unsplash.com/photos/white-and-brown-fox-lying-on-brown-sand-during-daytime-5fvOITtHgaE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></sup>
+</p><br>  
 
 ## What is Fennec?
 
@@ -13,16 +18,25 @@ Fennec instead allows the programmer to write functions for each ISO 7816 instru
 
 ### Better typing
 
-Java Card provides fairly barebones support for ...
+Java Card provides fairly barebones support for various types: just `boolean`, `byte`, `short`, and `int`, as well as arrays of those.
 
+On top of these, Fennec provides built-in support for wide integer types, option types, and result types.
+
+### Simpler syntax
+
+Java requires a lot of boilerplate, and Java Card adds to this with initialization and APDU-handling boilerplate.
+
+Fennec handles state and persisted data in a "convention over configuration" manner, erring toward simplicity.
 
 ### First-class cryptography support
 
-...
+While the hardware accelerators on many Java Cards provide constant-time implementations, many have issues, including the [Minerva attack](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14318). Additionally, often the hardware accelerators on a Java Card will be used for unintended purposes, such as how [JCMathLib](https://github.com/OpenCryptoProject/JCMathLib) leverages the RSA accelerator on cards for fast modular exponentiation. This often leads to fast but (as the README for JCMathLib warns) non-constant time implementations that can leak private key material.
+
+Fennec similarly leverages hardware accelerators on cards, but controls the output program at the bytecode level in order to ensure fast but constant time implementations.
 
 ## Why's it called that?
 
-Fennecs are tiny foxes. I like foxes.
+It's a tiny language for a tiny processor. Fennecs are tiny foxes. I like foxes.
 
 ## Why write it in Rust?
 
@@ -30,7 +44,11 @@ Rust is great for writing little compilers like this, especially when using the 
 
 ## Why not write it in Python then?
 
-I totally could have. I just didn't want to. I'll use the excuse that Rust will be faster for longer programs, and also something something better typing for large projects etc.
+I totally could have. I just didn't want to. I'll use the excuse that Rust will be faster for longer programs, and also Rust's typing is nice when working on larger projects.
+
+## Isn't `$RELATED_PROJECT` good enough for this?
+
+Probably. I haven't seen any alternate Java Card languages. At the moment, I'm mostly writing this for my personal Java Card experiments. Suggestions are always welcome though--feel free to add any issues/MRs.
 
 ## Why compile directly to the JCVM and not to Java Card?
 
