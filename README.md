@@ -34,6 +34,10 @@ While the hardware accelerators on many Java Cards provide constant-time impleme
 
 Fennec similarly leverages hardware accelerators on cards, but controls the output program at the bytecode level in order to ensure fast but constant time implementations.
 
+### Inline unit testing
+
+Java frequently puts unit far away from the actual code. Fennec puts them right next to the code, and lets you test them trivially with physical hardware or [jCardSim](https://github.com/licel/jcardsim). Eventually I'd like to write a Java Card simulator in Rust too, but for now that's out of scope.
+
 ## Why's it called that?
 
 It's a tiny language for a tiny processor. Fennecs are tiny foxes. I like foxes.
